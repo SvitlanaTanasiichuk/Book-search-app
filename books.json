@@ -1,0 +1,46 @@
+{
+    "books" : {
+      "-Ks9A3-eIu1b8faiP6u1" : {
+        "author" : "Адам Фримен",
+        "releaseDate" : "2018",
+        "description" : "Выжмите из Angular - ведущего фреймворка для динамических приложений javascript - всё. Адам Фримен начинает с описания MVC и его преимуществ, затем показывает, как эффективно использовать Angular, охватывая все этапы: начиная с основ и до самых передовых возможностей, которые кроются в глубинах этого фреймворка.",
+        "imageUrl" : "https://www.kodges.ru/uploads/posts/2017-11/1509556459_991.jpg",
+        "title" : "Angular для профессионалов"
+      },
+      "-Ks9DMa1mociWYhuU3N3" : {
+        "author" : "Philippe Martin",
+        "releaseDate" : "2018",
+        "description": "Angular is a really powerful framework to create interactive applications and websites. If you want your application or website to be seen and used by a lot of people, you must make it visible in search engines. This book will give you all the tips and tricks to optimize your website for search engines.",
+        "imageUrl" : "https://freefrontend.com/assets/img/angular-books/angular-universal.jpg",
+        "title" : "ANGULAR UNIVERSAL"
+      },
+      "-KsNa2IqF0HtVBo4KIXl" : {
+        "author" : "Ashlee Vance",
+        "releaseDate" : "2018",
+        "description" : "Angular helps you build faster, efficient, and flexible cross-platform applications. Creating complex and rich web applications, with a lighter resource footprint, has never been easier or faster. Angular is now at release 6, with significant changes compared to previous versions.",
+        "imageUrl" : "https://www.safaribooksonline.com/library/cover/9781788835176/360h/",
+        "title" : "Kevin Hennessy & Chandermani Arora"
+      },
+      "-KsNa6Nmu0M67D8rZh_G" : {
+        "author" : "Denys Vuika",
+        "releaseDate": "2018",
+        "description": "Руководство познакомит вас с полным циклом создания приложений на Angular, вы узнаете об Angular CLI, TypeScript и ES6, а также Webpack и другие необходимые инструменты.",
+        "imageUrl" : "https://www.kodges.ru/uploads/posts/2019-01/1546490753_developing-with-angular.jpg",
+        "title" : "Developing with Angular"
+      },
+      "-KsZ42HAqB-18oPs61Ar" : {
+        "author" : "Grant Cardone",
+        "releaseDate": "2016",
+        "description" : "It is the modern framework you need to build performant and robust web applications. Switching to Angular 2 is the quickest way to get to grips with Angular 2 and will help you transition in to the brave new world of Angular 2.",
+        "imageUrl" : "https://www.kodges.ru/uploads/posts/2018-01/1517356674_cov250.jpg",
+        "title" : " Switching to Angular 2"
+      },
+      "-KsZ4ugfbbPPxbb91v01" : {
+        "author" : "Ajitesh Shukla",
+        "releaseDate": "2017",
+        "description": "A complete guide to build robust and scalable web applications with Spring and Angular.",
+        "imageUrl" : "http://cdn2.btrstatic.com/pics/showpics/large/388609_6U6DDHpQ.jpg",
+        "title" : "Building Web Apps with Spring 5 and Angular"
+      }
+    }
+  }

@@ -1,7 +1,20 @@
 <mat-drawer-container class="container" autosize>
   <mat-drawer #drawer class="sidenav">
-    <button color="primary" mat-button [routerLink]="['/home']" routerLinkActive="router-link-active" >Главная</button>
-    <button color="primary" mat-button [routerLink]="['/search']" >Поиск</button>
+    <button color="primary" mat-button [routerLink]="['/home']" routerLinkActive="router-link-active" >
+      <i class="material-icons">
+      home</i> Главная</button>
+    <button color="primary" mat-button [routerLink]="['/books']" >
+      <i class="material-icons">
+      book
+      </i> Книги</button>
+    <button color="primary" mat-button [routerLink]="['/add-book']" >
+      <i class="material-icons">
+      library_books
+      </i> Добавить книгу</button>
+    <button color="primary" mat-button [routerLink]="['/search']" >
+      <i class="material-icons">
+      search
+      </i> Поиск</button>
   </mat-drawer>
   <div class="sidenav-content">
     <mat-toolbar color="primary">
@@ -10,9 +23,9 @@
               <mat-icon>menu</mat-icon>
             </button>
 
-          <span>Book search app</span>
+          <span class="title">Book search app</span>
           <span class=spacer></span>
-          <mat-icon>favorite</mat-icon>
+          <mat-icon>book</mat-icon>
           <button mat-icon-button [matMenuTriggerFor]="menu">
             <mat-icon>more_vert</mat-icon>
           </button>

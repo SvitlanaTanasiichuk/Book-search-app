@@ -5,7 +5,15 @@
     right: 0;
     bottom: 0;
 }
-
+button {
+    margin-top: 10px;
+}
+.title {
+    font-weight: 700;
+    font-size: 30px;
+    
+    margin-left: 30px;
+}
 .container .mat-drawer {
     min-width: 200px;
 }
