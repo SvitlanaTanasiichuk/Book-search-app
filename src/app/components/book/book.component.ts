@@ -9,14 +9,24 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class BookComponent implements OnInit {
   id: any;
+  title;
+  author;
+  rate;
+  description;
+  imageUrl;
+  releaseDate;
 
-  constructor(private firebaseService: FirebaseService, private router: Router, private route: ActivatedRoute) { }
+  constructor(private firebaseService: FirebaseService,private router:Router,private route:ActivatedRoute) { }
 
   ngOnInit() {
     this.id = this.route.snapshot.params['id'];
-    this.firebaseService.getBookDetails(this.id).subscribe(book => {
-      console.log ('book details:' + JSON.stringify(book));
-    })
+    this.firebaseService.getBookDetails(this.id).valueChanges().subscribe(book => {
+      this.title = book.title;
+      this.author = book.author;
+      this.rate = book.rate;
+      this.releaseDate = book.releaseDate;
+      this.description = book.description;
+      this.imageUrl = book.imageUrl;
+    });
   }
-
 }

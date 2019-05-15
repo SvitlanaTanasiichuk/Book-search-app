@@ -1,3 +1,31 @@
-<p>
-  add-book works!
-</p>
+<mat-toolbar>Добавить новую книгу</mat-toolbar>
+
+<div class="add-book-form">
+  <a [routerLink]="['/books']">Назад</a>
+  <form (submit)="submitAdd()" #myForm="ngForm">
+    <mat-form-field class="full-width">
+      <input type="text" matInput placeholder="Название книги" [(ngModel)]="title" name="title" required>
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <input type="text" matInput placeholder="Автор книги" [(ngModel)]="author" name="author" required>
+    </mat-form-field>
+    <mat-form-field class="full-width">
+      <input type="text" matInput placeholder="Дата выхода книги" [(ngModel)]="releaseDate" name="releaseDate" required>
+    </mat-form-field>
+    <div *ngIf="isRead">
+      <mat-form-field class="full-width">
+        <textarea matInput name="description" [(ngModel)]="description" placeholder="Описание книги" rows="5" ></textarea>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+          <textarea matInput name="rate" [(ngModel)]="rate" placeholder="Рейтинг книги (1-5)" min="1" max="5" step="0.1" type="number" ></textarea>
+        </mat-form-field>
+    </div>
+    <mat-form-field class="third-width">
+        <textarea matInput name="imageUrl" [(ngModel)]="imageUrl" placeholder="Загрузите рисунок"></textarea>
+      </mat-form-field>
+      <img src="{{imageUrl}}" alt="title">
+  <br>
+  <hr>
+  <button mat-raised-button value="submit" [disabled]="!myForm.form.valid">Создать книгу</button>
+  </form>
+</div>
