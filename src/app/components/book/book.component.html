@@ -1,4 +1,4 @@
-<mat-toolbar> Book Details </mat-toolbar>
+<mat-toolbar> Детали книги</mat-toolbar>
 
 <div *ngIf="!title" class="spinner"> 
      <mat-spinner></mat-spinner>
@@ -15,21 +15,21 @@
                     </div>
                     <div class="right">
                         <mat-list>
-                                <mat-list-item> <i class="material-icons">person_pin</i> Author:&nbsp;&nbsp;<b> {{author}}</b> </mat-list-item>
-                                <mat-list-item> <i class="material-icons">date_range</i> releaseDate:&nbsp;&nbsp;<b> {{releaseDate}}</b> </mat-list-item>
-
-                                <mat-list-item *ngIf="rate"> <i class="material-icons">star</i> Rate:&nbsp;&nbsp;<b>{{rate}}</b></mat-list-item>
+                                <mat-list-item> <i class="material-icons">person_pin</i> Автор:&nbsp;&nbsp;<b> {{author}}</b> </mat-list-item>
+                                <mat-list-item> <i class="material-icons">book</i> Жанр:&nbsp;&nbsp;<b> {{genre}}</b> </mat-list-item>
+                                <mat-list-item> <i class="material-icons">date_range</i> Год выхода книги:&nbsp;&nbsp;<b> {{releaseDate}}</b> </mat-list-item>
+                                <mat-list-item *ngIf="rate"> <i class="material-icons">star</i> Рейтинг:&nbsp;&nbsp;<b>{{rate}}</b></mat-list-item>
                         </mat-list>
                     </div>
                     <hr>
-                    <mat-toolbar>Description</mat-toolbar>
+                    <mat-toolbar>Описание</mat-toolbar>
                     {{description}}
-                    <p *ngIf="!description"> No description for this book! </p>
+                    <p *ngIf="!description"> Отсутствует описание книги! </p>
                 </mat-card-content>
                 <mat-card-actions>
-                    <button [routerLink]="['/books']" mat-raised-button> <i class="material-icons">view_module</i> All Books </button>
-                    <button [routerLink]="['/edit-book/'+id]"  mat-raised-button class="editButton"> <i class="material-icons">mode_edit</i> Edit </button> 
-                    <button [routerLink]="['/delete-book/'+id]" mat-raised-button color="warn"> <i class="material-icons">delete_sweep</i> Delete </button>
+                    <button [routerLink]="['/books']" mat-raised-button> <i class="material-icons">view_module</i> Все книги</button>
+                    <button [routerLink]="['/edit-book/'+id]"  mat-raised-button class="editButton"> <i class="material-icons">mode_edit</i> Редактировать</button> 
+                    <button [routerLink]="['/delete-book/'+id]" mat-raised-button color="warn"> <i class="material-icons">delete_sweep</i> Удалить </button>
                 </mat-card-actions>
             </mat-card>
 </div>

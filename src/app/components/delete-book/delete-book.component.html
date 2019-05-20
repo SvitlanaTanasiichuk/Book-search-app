@@ -1,3 +1,18 @@
-<p>
-  delete-book works!
-</p>
+<mat-toolbar color="warn"> Удалить книгу </mat-toolbar>
+<div *ngIf="!bookTitle" class="spinner"> 
+    <mat-spinner></mat-spinner>
+</div>
+
+<div class="delete-confirm" *ngIf="bookTitle">
+    <mat-toolbar color="primary">Вы хотите удалит книгу: "{{bookTitle}}".</mat-toolbar>
+    <mat-toolbar> 
+        <mat-toolbar-row>
+            <span>{{bookDescription}}</span>
+        </mat-toolbar-row>
+        <mat-toolbar-row>
+            <button [routerLink]="['/book/'+id]" mat-button color="accent"> Назад </button>
+            <button (click)="removeBook()" mat-raised-button color="warn">  Удалить </button>
+          </mat-toolbar-row>
+    </mat-toolbar>
+</div>
+

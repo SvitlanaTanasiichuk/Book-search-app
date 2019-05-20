@@ -10,6 +10,9 @@
       <input type="text" matInput placeholder="Автор книги" [(ngModel)]="author" name="author" required>
     </mat-form-field>
     <mat-form-field class="full-width">
+      <input type="text" matInput placeholder="Жанр" [(ngModel)]="genre" name="genre" required>
+    </mat-form-field>
+    <mat-form-field class="full-width">
       <input type="text" matInput placeholder="Дата выхода книги" [(ngModel)]="releaseDate" name="releaseDate" required>
     </mat-form-field>
     <div *ngIf="isRead">

@@ -1,3 +1,34 @@
-<p>
-  edit-book works!
-</p>
+<mat-card><strong> Редактировать книгу</strong></mat-card>
+
+<div class="edit-book-form">
+    <a [routerLink]="['/books']">Назад</a>
+    <form #values="ngForm" (submit)="submitEdit()">
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Название книги" [(ngModel)]="title" name="title">
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Автор книги" [(ngModel)]="author" name="author">
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Жанр" [(ngModel)]="genre" name="genre">
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Год выхода книги" type="number" [(ngModel)]="releaseDate" name="releaseDate">
+      </mat-form-field>
+      <mat-form-field class="full-width">
+          <textarea matInput rows="5" placeholder="Описание книги" [(ngModel)]="description" name="description" ></textarea>
+        </mat-form-field>
+    
+      <mat-form-field class="full-width">
+        <input matInput placeholder="Рейтинг книги (1-5)" min="1" max="5" step="0.1" type="number" [(ngModel)]="rate" name="rate">
+      </mat-form-field>    
+     
+
+      <mat-form-field class="third-width">
+          <input matInput placeholder="Сссылка на рисунок (вставьте URL)" [(ngModel)]="imageUrl" name="imageUrl">
+      </mat-form-field>
+      <img src="{{imageUrl}}" alt="{{title}}">
+      <hr>
+      <button mat-raised-button value="submit"> Сохранить изменения </button>
+    </form>
+</div>

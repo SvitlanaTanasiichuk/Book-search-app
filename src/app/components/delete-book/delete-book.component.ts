@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FirebaseService } from 'src/app/services/firebase.service';
+import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-delete-book',
@@ -7,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DeleteBookComponent implements OnInit {
 
-  constructor() { }
+  id;
+  bookTitle;
+  bookDescription;
+
+  constructor(private firebaseService: FirebaseService, private router: Router, private route: ActivatedRoute) {
+    this.firebaseService.getBooks2()
+   }
 
   ngOnInit() {
+    // get the book ID
+    this.id = this.route.snapshot.params['id'];
+    this.firebaseService.getBookDetails(this.id).valueChanges().subscribe(book => {
+      this.bookTitle = book.title;
+      this.bookDescription = book.description;
+    });
+  }
+
+  removeBook(){
+    this.firebaseService.deleteBook(this.id);
+    this.router.navigate([''])
   }
 
 }

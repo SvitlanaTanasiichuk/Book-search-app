@@ -16,9 +16,11 @@ export class AddBookComponent implements OnInit {
   imageUrl;
   releaseDate;
   example = of(null);
-  isRead: boolean;
+  isRead: boolean = false;
 
-  constructor(private firebaseService: FirebaseService, private router: Router) { }
+  constructor(private firebaseService: FirebaseService, private router: Router) {
+    this.firebaseService.getBooks2()
+   }
 
   ngOnInit() {
   }
@@ -33,6 +35,7 @@ export class AddBookComponent implements OnInit {
       imageUrl: this.imageUrl
     }
 
+    
     this.firebaseService.addBook(book);
     this.router.navigate(['books']);
   }
