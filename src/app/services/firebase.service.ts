@@ -1,9 +1,15 @@
 import { Injectable } from '@angular/core';
 import { AngularFireDatabase, AngularFireList, AngularFireObject} from "angularfire2/database";
-import { Observable } from "rxjs";
-// import {map} from 'rxjs/operators';
+import { BehaviorSubject, Observable } from "rxjs";
 import 'rxjs/add/operator/map'; 
 import 'core-js/es7/reflect';
+import {
+  map,
+  switchMap,
+  debounceTime,
+  distinctUntilChanged
+} from 'rxjs/operators';
+
 
 
 @Injectable({
@@ -15,6 +21,7 @@ export class FirebaseService {
   favoriteBooks: Observable<any>;
   unreadBooks: Observable<any>;
   bookDetails: AngularFireObject<any>;
+  
   
   constructor(private db: AngularFireDatabase) {}
 
@@ -78,4 +85,31 @@ export class FirebaseService {
   deleteBook(id){
      this.allbooks.remove(id);
   }
+
+  getSearch(start: BehaviorSubject<string>): Observable<any[]> {
+    return start.pipe(
+      switchMap(startText => {
+        const endText = startText + '\uf8ff';
+        return this.db
+          .list('/books', ref =>
+            ref
+              .orderByChild('title')
+              .limitToFirst(10)
+              .startAt(startText)
+              .endAt(endText)
+          )
+          .snapshotChanges()
+          .pipe(
+            debounceTime(200),
+            distinctUntilChanged(),
+            map(changes => {
+              return changes.map(a => {
+                return { key: a.payload.key, ...a.payload.val() };
+              });
+            })
+          );
+      })
+    );
+  }
+  
 }

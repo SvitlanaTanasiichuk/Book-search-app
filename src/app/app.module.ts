@@ -36,8 +36,8 @@ import { FooterComponent } from './components/footer/footer.component';
 //Firebase configuration
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
-import { AngularFireDatabaseModule } from '@angular/fire/database'
-
+import { AngularFireDatabaseModule } from '@angular/fire/database';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 //Service
 import { FirebaseService } from './services/firebase.service';
 
@@ -60,6 +60,7 @@ import { FirebaseService } from './services/firebase.service';
     FormsModule,
     AngularFireModule.initializeApp(environment.firebase, 'book-notes-app'),
     AngularFireDatabaseModule,
+    AngularFirestoreModule,
 
     //Material
     BrowserAnimationsModule,

@@ -15,6 +15,9 @@
     <mat-form-field class="full-width">
       <input type="text" matInput placeholder="Дата выхода книги" [(ngModel)]="releaseDate" name="releaseDate" required>
     </mat-form-field>
+    <mat-form-field class="full-width">
+      <input matInput placeholder="Количество страниц" type="number" [(ngModel)]="numberPages" name="numberPages">
+    </mat-form-field>
     <div *ngIf="isRead">
       <mat-form-field class="full-width">
         <textarea matInput name="description" [(ngModel)]="description" placeholder="Описание книги" rows="5" ></textarea>

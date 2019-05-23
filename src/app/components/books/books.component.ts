@@ -16,9 +16,6 @@ export class BooksComponent implements OnInit {
     }
 
   ngOnInit() {
-  //   this.firebaseService.getBooks().valueChanges().subscribe(books => 
-  //     {this.allBooks = books;
-  //       })
   
 
   this.firebaseService.getBooks().subscribe(books =>{

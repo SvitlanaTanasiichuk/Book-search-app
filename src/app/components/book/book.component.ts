@@ -13,6 +13,7 @@ export class BookComponent implements OnInit {
   author;
   genre;
   rate;
+  numberPages;
   description;
   imageUrl;
   releaseDate;
@@ -26,6 +27,7 @@ export class BookComponent implements OnInit {
       this.author = book.author;
       this.genre = book.genre;
       this.rate = book.rate;
+      this.numberPages = book.numberPages;
       this.releaseDate = book.releaseDate;
       this.description = book.description;
       this.imageUrl = book.imageUrl;

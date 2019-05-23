@@ -1,3 +1,46 @@
-<p>
-  search works!
-</p>
+<!-- 
+<form class="form">
+    <h5 class="title">Search Type</h5>    
+  <mat-form-field class="full-width">
+    <input matInput placeholder="Поиск ..." [(ngModel)]="searchValue" [ngModelOptions]="{standalone: true}" (keyup)="searchByName()">
+  </mat-form-field>
+</form> -->
+
+<!-- <h1>Movie Search</h1>
+<input
+  type="text"
+  #searchInput
+  (keyup)="search(searchInput.value)"
+  placeholder="search movies..."
+  class="input"
+/>
+<div *ngFor="let book of (books | async)">
+  <h4>Title: {{ book?.title }}</h4>
+  <p>Author: {{ book?.author }}</p>
+</div>
+<div *ngIf="(books | async)?.length < 1">
+  <hr />
+  <p>No results found :(</p>
+</div> -->
+
+<form>
+  <h5>Поиск </h5>  
+  <input class="form-control" name="searchInput" placeholder="Search" #searchInput="ngModel" [(ngModel)]="searchText" style="width: 80%;">
+</form>
+<table>
+  <thead>
+    <th>Автор</th>
+    <th>Название</th>
+    <th>Дата выхода книги</th>
+    <th></th>
+  </thead>
+  <ng-container *ngFor="let book of allbooks">
+    <tr  *ngIf="filterCondition(book)">
+      <td>{{book.author}}</td>
+      <td>{{book.title}}</td>
+      <td>{{book.releaseDate}}</td>
+      <button [routerLink]="['/books']" mat-raised-button> <i class="material-icons">view_module</i> Все книги</button>
+    </tr>
+  </ng-container>
+</table>
+
