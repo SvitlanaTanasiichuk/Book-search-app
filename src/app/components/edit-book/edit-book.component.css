@@ -1,0 +1,13 @@
+img {
+    width: auto;
+    height: 300px;
+}
+
+.saveChangesButton {
+        color :white !important;
+        background-color: #cfdd08;
+    }
+.saveChangesButton:hover {
+        background-color: #beb206;
+    }
+

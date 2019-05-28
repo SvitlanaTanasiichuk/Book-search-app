@@ -15,6 +15,10 @@
       <i class="material-icons">
       search
       </i> Поиск</button>
+      <button color="primary" mat-button  [routerLink]="['/login']" >
+        <i class="material-icons">
+          book
+          </i>Войти</button>
   </mat-drawer>
   <div class="sidenav-content">
     <mat-toolbar color="primary">
@@ -25,29 +29,9 @@
 
           <span class="title">Book search app</span>
           <span class=spacer></span>
-          <mat-icon>book</mat-icon>
-          <button mat-icon-button [matMenuTriggerFor]="menu">
-            <mat-icon>more_vert</mat-icon>
-          </button>
-          <mat-menu #menu="matMenu">
-            <button mat-menu-item>
-              <mat-icon>publish</mat-icon>
-              <span>Share</span>
-            </button>
-            <button mat-menu-item disabled>
-              <mat-icon>mode_comment</mat-icon>
-              <span>Connect</span>
-            <button mat-menu-item>
-              <mat-icon>delete</mat-icon>
-              <span>Delete</span>
-            </button>
-            </button>
-          </mat-menu>
+         
       </mat-toolbar-row>
     </mat-toolbar>
-    
     <router-outlet></router-outlet>
   </div>
 </mat-drawer-container>
-
-

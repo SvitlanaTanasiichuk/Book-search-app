@@ -1,7 +1,10 @@
 @import '@angular/material/prebuilt-themes/deeppurple-amber.css';
- 
+
 body {
      font-family: Roboto, sans-serif;
+     width: 100vw;
+     margin: 0 auto;
+     overflow:  hidden;
  }
 li { 
     list-style: none; 
@@ -47,15 +50,30 @@ mat-grid-tile{
 .delete-confirm{margin:0 auto; width: 40%;}
 .details-book{ margin:0 auto; width: 60%;height: 100vh }
 .bookTile{padding:25px auto;}
-.editButton{
+.editButton, .createButton {
     color :white !important;
-    background-color: rgba(255, 222, 121, 0.96);
+    background-color: #2eac2a;
+}
+.editButton:hover, .createButton:hover {
+    background-color: #075f04;
 }
 
 .detailsButton{
     color :white !important;
-    background-color: rgb(114, 168, 255)
+    background-color: #3f77c0;
 }
+
+.detailsButton:hover {
+    background-color: #0a3e83;
+}
+.allBookButton, .backButton {
+        color :white !important;
+        background-color: #8c76f0;
+    }
+.allBookButton:hover, .backButton:hover {
+        background-color: #4222f3;
+    }
+
 .appTitle{margin:0 auto; width: 70%;}
 .appTitleDiv{
     color :white !important; 
@@ -68,22 +86,6 @@ mat-grid-tile{
 div.appTitleDiv > h1{
 font-size: 200%;
 }
-
-.footer {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    padding: 1rem;
-    background-color: rgb(114, 168, 255);
-    color :white !important;
-    text-align: center;
-  }
-
-  div.footer>a{
-    color :white !important;
-  }
-
   .spinner{
     position: fixed;
     left: 50%;
@@ -91,3 +93,4 @@ font-size: 200%;
     margin-top: -50px;
     margin-left: -50px;
   }
+  

@@ -1,8 +1,16 @@
-.bookTile {
-    width: 300px;
-}
 
+.bookTile {
+    height: 50vh;
+    max-width: 350px;
+    
+}
+mat-toolbar {
+    font-size: 30px;
+}
 img {
-    object-fit: cover;
-    width: 100%;
+    background-size: cover;
+    margin-left: 20%;
+    width: auto;
+    height: 55%;
+    overflow: hidden;
 }

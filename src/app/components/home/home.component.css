@@ -1,14 +1,18 @@
-.detailsButton {
-    background-color: #3f77c0;
-    color: white;
+mat-grid-tile { transition: all .2s ease; }
+mat-grid-tile:hover { transform: scale(1.1); }
+
+mat-card {
+    height: 50vh;
+    max-width: 350px;    
 }
-.detailsButton :hover {
-    background-color: #0a3e83;
+mat-toolbar {
+    font-size: 30px;
 }
-.editButton {
-    background-color: #2eac2a;
-    color: white;
-    }
-.editButton :hover {
-    background-color: #075f04;
+img {
+    background-size: cover;
+    margin-left: 20%;
+    width: auto;
+    height: 55%;
+    overflow: hidden;
+    
 }

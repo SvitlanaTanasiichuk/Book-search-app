@@ -31,15 +31,20 @@ import { BooksComponent } from './components/books/books.component';
 import { AddBookComponent } from './components/add-book/add-book.component';
 import { DeleteBookComponent } from './components/delete-book/delete-book.component';
 import { EditBookComponent } from './components/edit-book/edit-book.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 //Firebase configuration
 import { AngularFireModule } from '@angular/fire';
 import { environment } from 'src/environments/environment';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
 //Service
 import { FirebaseService } from './services/firebase.service';
+import { LoginComponent } from './components/login/login.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { AuthService } from './services/auth.service';
+import { UserService } from './services/user.service';
 
 
 @NgModule({
@@ -52,7 +57,9 @@ import { FirebaseService } from './services/firebase.service';
     AddBookComponent,
     DeleteBookComponent,
     EditBookComponent,
-    FooterComponent
+    PageNotFoundComponent,
+    LoginComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
@@ -61,6 +68,7 @@ import { FirebaseService } from './services/firebase.service';
     AngularFireModule.initializeApp(environment.firebase, 'book-notes-app'),
     AngularFireDatabaseModule,
     AngularFirestoreModule,
+    AngularFireAuthModule,
 
     //Material
     BrowserAnimationsModule,
@@ -79,7 +87,7 @@ import { FirebaseService } from './services/firebase.service';
     MatTabsModule,
     MatListModule
   ],
-  providers: [FirebaseService],
+  providers: [FirebaseService, AuthService, UserService, AngularFireAuth],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

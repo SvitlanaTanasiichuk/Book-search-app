@@ -63,7 +63,7 @@ export class FirebaseService {
     });
   });
     return this.unreadBooks;
-  }
+}
 
   getBookDetails(id){
     this.bookDetails = this.db.object('/books/'+id) as AngularFireObject<any>;

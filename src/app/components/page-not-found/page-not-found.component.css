@@ -1,0 +1,8 @@
+	
+div {
+    width: 60%;
+    height: 60vh;
+    margin: 0 auto;
+    background-image: url("../../../assets/not-found.png");
+    background-size: cover;
+}

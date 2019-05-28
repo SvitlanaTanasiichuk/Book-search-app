@@ -11,7 +11,7 @@
                 </mat-card-title>
                 <mat-card-content>
                     <div class="left">
-                            <img src="{{imageUrl}}" />
+                        <img src="{{imageUrl}}" />
                     </div>
                     <div class="right">
                         <mat-list>
@@ -28,7 +28,7 @@
                     <p *ngIf="!description"> Отсутствует описание книги! </p>
                 </mat-card-content>
                 <mat-card-actions>
-                    <button [routerLink]="['/books']" mat-raised-button> <i class="material-icons">view_module</i> Все книги</button>
+                    <button [routerLink]="['/books']" mat-raised-button class="allBookButton"> <i class="material-icons">view_module</i> Все книги</button>
                     <button [routerLink]="['/edit-book/'+id]"  mat-raised-button class="editButton"> <i class="material-icons">mode_edit</i> Редактировать</button> 
                     <button [routerLink]="['/delete-book/'+id]" mat-raised-button color="warn"> <i class="material-icons">delete_sweep</i> Удалить </button>
                 </mat-card-actions>

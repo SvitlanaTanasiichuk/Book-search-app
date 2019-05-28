@@ -1,17 +1,10 @@
-.details-book{
-    margin-top:30px;
-    margin-left:260px;  
-    margin-right:260px;  
-    /* text-align: center; */
-}
 .mat-card-title{
     text-align: left;
 }
 .left {
-    float: left;
     width: 50%;
     overflow: hidden;
-    border: none;
+    margin-left: 10px;
   }
   
 .right {
@@ -19,5 +12,6 @@
   }
 img {
     object-fit: cover;
-    width: 100%;
+    width: auto;
+    height: 300px;
 }

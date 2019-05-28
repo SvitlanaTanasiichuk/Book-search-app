@@ -1,3 +1,6 @@
+mat-drawer-container {
+    width: 100vw !important;
+}
 .container {
     position: absolute;
     top: 0;
@@ -7,6 +10,7 @@
 }
 button {
     margin-top: 10px;
+   outline: none;
 }
 .title {
     font-weight: 700;
@@ -20,7 +24,7 @@ button {
 
 .container .mat-drawer .mat-button {
     display: block;
-    width: 100%;
+    width: 100% !important;
     text-align: left;
 }
 

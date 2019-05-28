@@ -1,0 +1,9 @@
+.loginCard {
+    width: 210px;
+    margin: 4em auto;
+    background-color: #eeddf1f8;
+}
+
+.loginCard button {
+    margin-left: 4em;
+}

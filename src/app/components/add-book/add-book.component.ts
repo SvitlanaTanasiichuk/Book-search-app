@@ -35,7 +35,6 @@ export class AddBookComponent implements OnInit {
       imageUrl: this.imageUrl
     }
 
-    
     this.firebaseService.addBook(book);
     this.router.navigate(['books']);
   }

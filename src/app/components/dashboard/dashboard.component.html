@@ -1,0 +1,16 @@
+<mat-card class="matCard">
+  <mat-card-header>
+    <mat-card-title>Data from service authentication</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src="{{ user.photoURL }}" alt="Card image cap">
+  <mat-card-content>
+    <mat-card-title>
+      <strong>{{ user.displayName }}</strong>
+    </mat-card-title>
+    <p>{{ user.email }}</p>
+    <p><strong>UID:</strong> {{ user.uid }}</p>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="logout()">Logout</button>
+  </mat-card-actions>
+  </mat-card-content>
+</mat-card>

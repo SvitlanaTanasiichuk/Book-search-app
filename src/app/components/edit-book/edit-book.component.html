@@ -1,7 +1,7 @@
 <mat-card><strong> Редактировать книгу</strong></mat-card>
 
 <div class="edit-book-form">
-    <a [routerLink]="['/books']">Назад</a>
+    <button class="backButton" mat-raised-button value="back" [routerLink]="['/books']"><i class="material-icons">arrow_back_ios</i> Назад </button>
     <form #values="ngForm" (submit)="submitEdit()">
       <mat-form-field class="full-width">
         <input matInput placeholder="Название книги" [(ngModel)]="title" name="title">
@@ -32,6 +32,6 @@
       </mat-form-field>
       <img src="{{imageUrl}}" alt="{{title}}">
       <hr>
-      <button mat-raised-button value="submit"> Сохранить изменения </button>
+      <button class="saveChangesButton" mat-raised-button value="submit"><i class="material-icons">save</i> Сохранить изменения </button>
     </form>
 </div>

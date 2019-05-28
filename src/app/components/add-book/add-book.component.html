@@ -1,7 +1,7 @@
 <mat-toolbar>Добавить новую книгу</mat-toolbar>
 
 <div class="add-book-form">
-  <a [routerLink]="['/books']">Назад</a>
+  <button mat-button  class="backButton" [routerLink]="['/books']">Назад</button>
   <form (submit)="submitAdd()" #myForm="ngForm">
     <mat-form-field class="full-width">
       <input type="text" matInput placeholder="Название книги" [(ngModel)]="title" name="title" required>
@@ -32,6 +32,6 @@
       <img src="{{imageUrl}}" alt="title">
   <br>
   <hr>
-  <button mat-raised-button value="submit" [disabled]="!myForm.form.valid">Создать книгу</button>
+  <button mat-raised-button value="submit" class="createButton" [disabled]="!myForm.form.valid">Создать книгу</button>
   </form>
 </div>
