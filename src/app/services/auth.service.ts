@@ -50,6 +50,7 @@ export class AuthService {
   }
 
   logout() {
+    this.userservice.clearLocalStorage(); 
     this.afAuth.auth.signOut().then(() => {
       this.router.navigate(['login']);
     });

@@ -1,9 +1,14 @@
-mat-grid-tile { transition: all .2s ease; }
-mat-grid-tile:hover { transform: scale(1.1); }
+mat-grid-tile { 
+    transition: all .3s ease; 
+}
+mat-grid-tile:hover { 
+    transform: scale(1.1);
+ }
 
 mat-card {
     height: 50vh;
-    max-width: 350px;    
+    max-width: 350px; 
+    overflow: hidden;   
 }
 mat-toolbar {
     font-size: 30px;
@@ -12,7 +17,7 @@ img {
     background-size: cover;
     margin-left: 20%;
     width: auto;
-    height: 55%;
+    height: 50%;
     overflow: hidden;
     
 }

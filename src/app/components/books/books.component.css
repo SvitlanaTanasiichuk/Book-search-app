@@ -2,6 +2,7 @@
 .bookTile {
     height: 50vh;
     max-width: 350px;
+    overflow: hidden;
     
 }
 mat-toolbar {
@@ -11,6 +12,6 @@ img {
     background-size: cover;
     margin-left: 20%;
     width: auto;
-    height: 55%;
+    height: 50%;
     overflow: hidden;
 }
